@@ -33,7 +33,7 @@ const columns = [
     render: (text, record) => (
       <Space size="middle">
         <a>Edit</a>
-        <a>Delete</a>
+        <a>View</a>
       </Space>
     ),
   },
@@ -97,6 +97,7 @@ const Demo = () => {
     <Divider />
     
     <Button type="primary">Add new</Button>
+    <Button type="primary">Delete</Button>
     <br />
   </Space>
 
