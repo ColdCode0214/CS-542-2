@@ -1,7 +1,4 @@
-//import React from 'react';
-//import ReactDOM from 'react-dom';
 import "antd/dist/antd.css";
-//import './index.css';
 import { Form, Input, Button, Checkbox } from "antd";
 import Register from "../register/register";
 import {
@@ -29,14 +26,20 @@ const Login = () => {
  
 
   return (
-    //<></> => <React.Fragment></React.Fragment>
+
     <>
-      <h1 style={{ "justify-content": "center" }}>Login</h1>
-      {showSignup === true ? (<Form
+
+      
+      
+      {showSignup === true ? (
+        <>
+          <h1 style={{ "justify-content": "center" }}>Login Page</h1>
+      
+      <Form
         
         name="basic"
         labelCol={{
-          span: -15,
+          span: 8,
         }}
         wrapperCol={{
           span: 16,
@@ -51,7 +54,6 @@ const Login = () => {
         <Form.Item
           label="Username"
           name="username"
-
           rules={[
             {
               required: true,
@@ -59,7 +61,7 @@ const Login = () => {
             },
           ]}
         >
-          {/* adjust input field width */}
+
           <Input  />
         </Form.Item>
 
@@ -84,7 +86,7 @@ const Login = () => {
             span: 16,
           }}
         >
-          <Checkbox style={{ "justify-content": "center" }}>
+          <Checkbox style={{ "justify-content": "center"}}>
             Remember me
           </Checkbox>
         </Form.Item>
@@ -98,7 +100,7 @@ const Login = () => {
           <Button
             type="primary"
             htmlType="submit"
-            style={{ "justify-content": "center" }}
+            style={{ "justify-content": "center"}}
           >
             Login
           </Button>
@@ -109,25 +111,21 @@ const Login = () => {
           </div>
           <br />
         </Form.Item>
-        
-<Router>
-<Link to="/register">
-  <Button
+
+        <Button
           type="primary"
           htmlType="submit"
           style={{ "justify-content": "center"}}
-          //style={{ "justify-content": "center", "margin-left": 450 }}
           onClick={handleSignup}
         >
           Register
         </Button>
-        </Link>
-        <Routes>
-          <Route  path="/register" element={<Register />}/>
-        </Routes>
-</Router>
 
-      </Form>):<Register />}
+
+
+      </Form>
+      </>
+      ):<Register />}
       
 
     </>

@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
+//import './index.css';
 import { Table, Tag, Space } from 'antd';
 import { Radio, Divider } from 'antd';
 import { DatePicker, Button } from 'antd';
-import Login from "../login/login";
-import { useState } from "react";
 
 
-
-
-
+  <body>
+    <h1>Login Page</h1>
+    <div id="container" style="padding: 24px" />
+    <script>var mountNode = document.getElementById('container');</script>
+    
+  </body>
 
 const { RangePicker } = DatePicker;
 
@@ -83,29 +85,9 @@ const rowSelection = {
 
 };
 
-const Supplyer = () => {
-
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
-  
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
-  
-  const [showSignup, setShowSignup] = useState(true)
-  const handleSignup = ()=>{
-    setShowSignup(false)
-  }
-
+const Demo = () => {
   const [selectionType, setSelectionType] = useState('checkbox');
   return (
-
-    <>
-      {/*  */}
-      {showSignup === true ? (
-        <>
-          <h1 style={{ "justify-content": "center" }}>Supply Manager Page</h1>
     <div>
       <Radio.Group
         onChange={({ target: { value } }) => {
@@ -137,27 +119,11 @@ const Supplyer = () => {
         columns={columns}
         dataSource={data}
       />
-      {/* <Button type="primary">Log out</Button> */}
-      <Button
-          type="primary"
-          htmlType="submit"
-          style={{ "justify-content": "center"}}
-          onClick={handleSignup}
-        >
-          Log Out
-        </Button>
+      <Button type="primary">Log out</Button>
     </div>
-    </>
-    
-    ):<Login />}
-      
-
-      </>
-
-
     
   );
 };
 
 //ReactDOM.render(<Demo />, document.getElementById('container'));
-export default Supplyer;
+export default Demo;
