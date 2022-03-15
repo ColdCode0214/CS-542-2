@@ -6,6 +6,14 @@ import { Table, Tag, Space } from 'antd';
 import { Radio, Divider } from 'antd';
 import { DatePicker, Button } from 'antd';
 
+
+  <body>
+    <h1>Login Page</h1>
+    <div id="container" style="padding: 24px" />
+    <script>var mountNode = document.getElementById('container');</script>
+    
+  </body>
+
 const { RangePicker } = DatePicker;
 
 const columns = [

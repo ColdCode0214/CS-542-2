@@ -1,18 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-//import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+//import "./index.css";
+import App from "./App";
 //import reportWebVitals from './reportWebVitals';
-//import Demo from './components/loginpage';
-//import Demo from './components/register page';
-import Demo from './components/supply manager page';
-
+import Login from "./components/login/login";
+import { Row, Col } from "antd";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Demo />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <>
+    <Row>
+      <Col span={8}></Col>
+      <Col span={8}>
+        <Login />
+      </Col>
+      <Col span={8}></Col>
+    </Row>
+  </>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
