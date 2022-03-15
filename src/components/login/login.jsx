@@ -109,7 +109,7 @@ const Login = () => {
           <div style={{ "justify-content": "center"}}>
             Don't have an account? Register one!
           </div>
-          <br />
+
         </Form.Item>
 
         <Button

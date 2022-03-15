@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-//import './index.css';
 import { Table, Tag, Space } from 'antd';
 import { Radio, Divider } from 'antd';
 import { DatePicker, Button } from 'antd';
+import Login from "../login/login";
+import { useState } from "react";
 
 
-  <body>
-    <h1>Login Page</h1>
-    <div id="container" style="padding: 24px" />
-    <script>var mountNode = document.getElementById('container');</script>
-    
-  </body>
 
 const { RangePicker } = DatePicker;
 
@@ -85,9 +80,27 @@ const rowSelection = {
 
 };
 
-const Demo = () => {
+const Deliver = () => {
+
+  const onFinish = (values) => {
+    console.log('Success:', values);
+  };
+  
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  };
+  
+  const [showSignup, setShowSignup] = useState(true)
+  const handleSignup = ()=>{
+    setShowSignup(false)
+  }
+
   const [selectionType, setSelectionType] = useState('checkbox');
   return (
+    <>
+      {showSignup === true ? (
+        <>
+          <h1 style={{ "justify-content": "center" }}>Deliver Manager Page</h1>
     <div>
       <Radio.Group
         onChange={({ target: { value } }) => {
@@ -121,9 +134,15 @@ const Demo = () => {
       />
       <Button type="primary">Log out</Button>
     </div>
+    </>
+    
+    ):<Login />}
+      
+
+      </>
     
   );
 };
 
 //ReactDOM.render(<Demo />, document.getElementById('container'));
-export default Demo;
+export default Deliver;

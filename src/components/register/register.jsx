@@ -100,12 +100,12 @@ const Register = () => {
       <Form.Item
         label="Please choose your role"
         name="Please choose your role"
-        // rules={[
-        //   {
-        //     required: true,
-        //     message: 'Please choose your role!',
-        //   },
-        // ]}
+        rules={[
+          {
+            required: true,
+            message: 'Please choose your role!',
+          },
+        ]}
       >
       <Space direction="vertical">
     <Space wrap>
